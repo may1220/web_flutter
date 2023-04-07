@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:testing_app/e_commerce/screens/home/home_screen.dart';
 import 'package:testing_app/google_login/google_login_page.dart';
+import 'package:testing_app/graph/graph.dart';
+import 'package:testing_app/graph/graph_home.dart';
 import 'package:testing_app/pie_chart/pie_chart_page.dart';
 import 'package:testing_app/testing_ui_pages/home_page.dart';
 import 'package:testing_app/testing_ui_pages/onboarding_page.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:testing_app/theme/theme.dart';
 import 'package:testing_app/web_view/web_view_page.dart';
 
 import 'web_view/sample_webview.dart';
@@ -31,11 +35,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: AppTheme.appTheme,
       // home: showHome ? HomePage() : const OnBoardingPage(),
-      home: WebViewExample(),
+      home: GraphHome(),
     );
   }
 }
